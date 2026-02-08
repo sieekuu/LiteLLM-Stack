@@ -1,0 +1,65 @@
+# =============================================================================
+# LITELLM - PLIK KONFIGURACYJNY
+# =============================================================================
+# Ten plik definiuje podstawową konfigurację LiteLLM proxy.
+# Modele i klucze API będą dodawane przez panel Open WebUI.
+# Dokumentacja: https://docs.litellm.ai/docs/proxy/configs
+# =============================================================================
+
+# Pusta lista modeli - będą dodawane dynamicznie przez panel
+model_list: []
+
+# =============================================================================
+# GENERAL SETTINGS
+# =============================================================================
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+  
+  # Włącz UI dla LiteLLM (dostępny na /ui)
+  ui: true
+  
+  # Włącz endpoint /key/generate dla generowania kluczy
+  allow_user_auth: true
+  
+  # Logging
+  success_callback: []
+  failure_callback: []
+  
+  # Opcjonalne: Cache (odkomentuj jeśli używasz Redis)
+  # cache: true
+  # cache_params:
+  #   type: redis
+  #   host: os.environ/REDIS_HOST
+  #   port: os.environ/REDIS_PORT
+  #   password: os.environ/REDIS_PASSWORD
+
+# =============================================================================
+# INSTRUKCJE UŻYCIA:
+# =============================================================================
+# 1. Uruchom: docker-compose up -d
+# 2. Otwórz Open WebUI: http://localhost:3000
+# 3. Utwórz konto administratora (pierwsze logowanie)
+# 4. W ustawieniach Open WebUI dodaj połączenia do providerów:
+#    - Przejdź do Settings -> Connections
+#    - Dodaj OpenAI, Anthropic, lub innych providerów
+#    - Wprowadź klucze API
+# 5. Gotowe! Możesz korzystać z modeli
+#
+# UWAGA: Możesz również dodawać modele bezpośrednio do tego pliku,
+# jeśli wolisz konfigurację przez YAML zamiast przez panel.
+# =============================================================================
+
+# =============================================================================
+# PRZYKŁAD: Jak dodać model ręcznie (odkomentuj i dostosuj)
+# =============================================================================
+# model_list:
+#   - model_name: gpt-4
+#     litellm_params:
+#       model: gpt-4
+#       api_key: os.environ/OPENAI_API_KEY
+#
+#   - model_name: claude-3-sonnet
+#     litellm_params:
+#       model: claude-3-sonnet-20240229
+#       api_key: os.environ/ANTHROPIC_API_KEY
+# =============================================================================
