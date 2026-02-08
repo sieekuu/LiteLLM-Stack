@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![LiteLLM-Stack Banner](https://via.placeholder.com/1200x300/0066CC/FFFFFF?text=LiteLLM-Stack+%7C+Self-Hosted+AI+Infrastructure)
-
 **Production-ready Docker stack for self-hosted AI infrastructure**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -352,3 +350,4 @@ If you find this project useful, please consider giving it a star! It helps othe
 Made with ❤️ by [Krzysztof Siek](https://github.com/sieekuu)
 
 </div>
+
