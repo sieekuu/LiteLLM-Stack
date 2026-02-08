@@ -74,7 +74,7 @@ Perfect for developers, researchers, and organizations who want full control ove
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/litellm-stack.git
+git clone https://github.com/sieekuu/litellm-stack.git
 cd litellm-stack
 
 # Generate SSL certificates
@@ -350,4 +350,5 @@ If you find this project useful, please consider giving it a star! It helps othe
 Made with ❤️ by [Krzysztof Siek](https://github.com/sieekuu)
 
 </div>
+
 
